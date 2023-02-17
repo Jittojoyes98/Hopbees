@@ -13,6 +13,9 @@ module.exports = {
   ],
   devServer: {
     port: 3030, // you can change the port
+    historyApiFallback: true,
+    // contentBase: './',
+    hot: true
   },
   resolve: {
     extensions: ['.js', '.jsx', '.png', '.wasm', '.tar', '.data', '.svg', '.png', '.jpg', '.jpeg', '.gif', '.json'],
