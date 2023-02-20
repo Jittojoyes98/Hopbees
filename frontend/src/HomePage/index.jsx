@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom'
 const index = () => {
   return (
     <>
-      <div>index</div>
-      <Link to={"/login"}>Hello</Link>
+      <div>Home</div>
     </>
   )
 }

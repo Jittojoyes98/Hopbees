@@ -2,6 +2,10 @@ import React from 'react'
 import  Button  from 'react-bootstrap/Button';
 
 const Header = () => {
+
+  const handlePath=(path)=>{
+    window.open(`/${path}`,'_blank')
+  }
   return (
     <div className='header'>
         <div>Logo</div>
@@ -16,8 +20,8 @@ const Header = () => {
               
           </div>
           <div className='d-flex justify-content-between align-items-center'>
-            <Button variant='primary' className='fw-semibold px-4 me-1 py-1'>Log in</Button>
-            <Button variant='secondary' className='fw-semibold px-4 py-1'>Sign up</Button>
+            <Button onClick={()=>handlePath("login")} type="button" variant='primary' className='fw-semibold px-4 me-1 py-1'>Log in</Button>
+            <Button onClick={()=>handlePath("signup")} type="button" variant='secondary' className='fw-semibold px-4 py-1'>Sign up</Button>
           </div>
           
 
