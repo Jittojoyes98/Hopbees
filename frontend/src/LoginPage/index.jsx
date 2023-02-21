@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Button } from 'react-bootstrap'
 import * as yup from 'yup'
 import { useFormik } from 'formik'
@@ -92,14 +92,30 @@ const LoginPage = () => {
               type="text"
               placeholder="Your email address"
               name="email"
-              className="d-block"
+              className="d-block mb-3 input-field"
+              title="Your email address"
               value={formik.values.email}
               onChange={formik.handleChange}
             />
             {formik.touched.email && formik.errors.email && (
-              <span className="">{formik.errors.email}</span>
+              <p className="validation-error-text">{formik.errors.email}</p>
             )}
-            <Button type="submit">Continue with email</Button>
+            <Button
+              type="submit"
+              disabled={!formik.isValid}
+              variant="secondary"
+              className={`mt-3 w-100 login-buttons fw-semibold ${
+                !formik.isValid ? 'submit-inactive' : 'submit-active'
+              }`}
+            >
+              Continue with email
+            </Button>
+            <div className="text-center mt-2">
+              <p className="text-light">
+                By continuing, you agree to the Terms of use, Privacy Policy,
+                and Community Standards of Hopbees.
+              </p>
+            </div>
           </form>
         </div>
       </div>

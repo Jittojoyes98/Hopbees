@@ -1,0 +1,71 @@
+// variables for reuse
+$font-family: 'Circular';
+$normal-font-size: 1rem;
+$body-font-size: 18px;
+$small-font-size: 0.875rem;
+$smaller-font-size: 0.813rem;
+$tiny-font-size: 0.625rem;
+
+// variables to replace the normal bootstrap values
+
+$spacer: 1rem; // 16px
+$spacers: (
+  0: 0,
+  1: (
+    $spacer * 0.25,
+  ),
+  2: (
+    $spacer * 0.5,
+  ),
+  2_5: (
+    $spacer * 0.75,
+  ),
+  3: $spacer,
+  4: (
+    $spacer * 1.5,
+  ),
+  5: (
+    $spacer * 2,
+  ),
+  6: (
+    $spacer * 2.5,
+  ),
+  7: (
+    $spacer * 3,
+  ),
+  8: (
+    $spacer * 5,
+  ),
+);
+$utilities: (
+  'width': (
+    property: width,
+    class: w,
+    values: (
+      25: 25%,
+      30: 30%,
+      50: 50%,
+      75: 75%,
+      100: 100%,
+      auto: auto,
+    ),
+  ),
+);
+
+// use when required
+// $font-size-base:              1rem; // Assumes the browser default, typically `16px`
+// $font-size-sm:                $font-size-base * .875;
+// $font-size-lg:                $font-size-base * 1.25;
+// $font-size-link: 18px;
+
+// $font-weight-lighter:         lighter;
+// $font-weight-light:           300;
+// $font-weight-normal:          400;
+// $font-weight-semibold:        600;
+// $font-weight-bold:            700;
+// $font-weight-bolder:          bolder;
+
+// $font-weight-base:            $font-weight-normal;
+
+// $line-height-base:            1.5;
+// $line-height-sm:              1.25;

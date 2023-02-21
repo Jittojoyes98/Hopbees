@@ -72,72 +72,10 @@
   font-style: italic;
 }
 
-// variables to replace the normal bootstrap values
-
-$dark: #131313;
-$spacer: 1rem; // 16px
-$spacers: (
-  0: 0,
-  1: (
-    $spacer * 0.25,
-  ),
-  2: (
-    $spacer * 0.5,
-  ),
-  2_5: (
-    $spacer * 0.75,
-  ),
-  3: $spacer,
-  4: (
-    $spacer * 1.5,
-  ),
-  5: (
-    $spacer * 2,
-  ),
-  6: (
-    $spacer * 2.5,
-  ),
-  7: (
-    $spacer * 3,
-  ),
-  8: (
-    $spacer * 5,
-  ),
-);
-$utilities: (
-  'width': (
-    property: width,
-    class: w,
-    values: (
-      25: 25%,
-      30: 30%,
-      50: 50%,
-      75: 75%,
-      100: 100%,
-      auto: auto,
-    ),
-  ),
-);
-
-// use when required
-// $font-size-base:              1rem; // Assumes the browser default, typically `16px`
-// $font-size-sm:                $font-size-base * .875;
-// $font-size-lg:                $font-size-base * 1.25;
-// $font-size-link: 18px;
-
-// $font-weight-lighter:         lighter;
-// $font-weight-light:           300;
-// $font-weight-normal:          400;
-// $font-weight-semibold:        600;
-// $font-weight-bold:            700;
-// $font-weight-bolder:          bolder;
-
-// $font-weight-base:            $font-weight-normal;
-
-// $line-height-base:            1.5;
-// $line-height-sm:              1.25;
-
+@import './colors.scss';
+@import './variables.scss';
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
 // @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;900&display=swap');
 
 // Base styles
@@ -146,23 +84,6 @@ $utilities: (
   padding: 0;
   box-sizing: border-box;
 }
-
-// variables for reuse
-$font-family: 'Circular';
-$body-text-color: #0a243f;
-$body-background-color: #fff;
-$normal-font-size: 1rem;
-$body-font-size: 18px;
-$small-font-size: 0.875rem;
-$smaller-font-size: 0.813rem;
-$tiny-font-size: 0.625rem;
-$button-text-color: #05051b;
-$button-hover-color: #077f7f;
-$white-color: #fff;
-$linkedin-button-background: #0077b5;
-$google-button-background: #4285f4;
-$light-gray: #e3e6ea;
-$light-text-color: #6b7b8a;
 
 html {
   scroll-behavior: smooth;
@@ -228,6 +149,10 @@ img {
   height: 70px;
 }
 
+// transition is the same for all buttons
+.btn {
+  transition: all 0.25s ease-in-out;
+}
 .btn-primary {
   background-color: #fff;
   color: $button-text-color;
@@ -321,6 +246,26 @@ img {
   .linkedin-button {
     background-color: $linkedin-button-background;
   }
+  .submit-inactive {
+    cursor: default;
+    background-color: $light-text-color;
+  }
+  .submit-inactive:hover:disabled {
+    cursor: default;
+    background-color: $button-hover-color;
+  }
+  .submit-active {
+    cursor: default;
+    background-color: $button-active;
+  }
+  .submit-active:hover {
+    cursor: default;
+    background-color: $button-hover-color;
+  }
+
+  // .submit-button:disabled {
+  //   background-color: $button-hover-color;
+  // }
 }
 
 .or-line {
@@ -342,6 +287,23 @@ img {
   z-index: 1;
   background-color: $white-color;
   color: $light-text-color;
+}
+
+.validation-error-text {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 4px;
+  color: $error-text;
+  line-height: 1.5rem;
+}
+.input-field {
+  background-color: $input-background;
+  border: 1px solid $input-border;
+  border-radius: 10px;
+  height: 60px;
+  width: 100%;
+  padding-left: 10px;
 }
 
 // screens
