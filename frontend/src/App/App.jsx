@@ -9,11 +9,18 @@ import HomePage from '../HomePage'
 const App = () => {
   return (
     <BrowserRouter>
-      <Layout>
-        {/* add routes here */}
-        <Route path="/" element={<HomePage />} layout="home" />
-        <Route path="/login" element={<LoginPage />} layout="login" />
-      </Layout>
+      <Suspense>
+        <Routes>
+          {/* add routes here */}
+          <Route path="/" element={<Layout layout="home" />}>
+            <Route index element={<HomePage />} />
+          </Route>
+
+          <Route path="/login" element={<Layout layout="login" />}>
+            <Route index element={<LoginPage />} />
+          </Route>
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   )
 }
