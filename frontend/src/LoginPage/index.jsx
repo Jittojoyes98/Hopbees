@@ -25,7 +25,7 @@ const LoginPage = () => {
     <div className="d-flex justify-content-center  align-items-center login-page">
       <div className="w-30 pt-8">
         <h1>Welcome to Hopbees !</h1>
-        <p>
+        <p className="text-center">
           Connect with our community of mentors and students to increase your
           love for your hobbies.
         </p>
@@ -102,18 +102,21 @@ const LoginPage = () => {
             )}
             <Button
               type="submit"
-              disabled={!formik.isValid}
+              disabled={!formik.dirty || !formik.isValid}
               variant="secondary"
               className={`mt-3 w-100 login-buttons fw-semibold ${
-                !formik.isValid ? 'submit-inactive' : 'submit-active'
+                !formik.dirty || !formik.isValid
+                  ? 'submit-inactive'
+                  : 'submit-active'
               }`}
             >
               Continue with email
             </Button>
             <div className="text-center mt-2">
-              <p className="text-light">
-                By continuing, you agree to the Terms of use, Privacy Policy,
-                and Community Standards of Hopbees.
+              <p className="text-muted">
+                By continuing, you agree to the <a href="">Terms of use</a>,{' '}
+                <a href="">Privacy Policy</a>, and{' '}
+                <a href="">Community Standards</a> of Hopbees.
               </p>
             </div>
           </form>

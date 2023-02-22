@@ -248,9 +248,10 @@ img {
   }
   .submit-inactive {
     cursor: default;
-    background-color: $light-text-color;
+    background-color: $button-inactive;
+    pointer-events: auto;
   }
-  .submit-inactive:hover:disabled {
+  .submit-inactive:hover {
     cursor: default;
     background-color: $button-hover-color;
   }
@@ -259,13 +260,12 @@ img {
     background-color: $button-active;
   }
   .submit-active:hover {
-    cursor: default;
+    cursor: pointer;
     background-color: $button-hover-color;
   }
-
-  // .submit-button:disabled {
-  //   background-color: $button-hover-color;
-  // }
+  a {
+    color: $button-text-color;
+  }
 }
 
 .or-line {
