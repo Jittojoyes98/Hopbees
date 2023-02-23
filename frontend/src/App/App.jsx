@@ -1,8 +1,7 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import '@/_styles/theme.scss'
 import { Layout } from '../_layout'
-import { Button } from 'react-bootstrap'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import LoginPage from '../LoginPage'
 import HomePage from '../HomePage'
 
