@@ -1,14 +1,12 @@
 import express from 'express'
 import dataBaseConnect from './config/db.js'
 import dotenv from 'dotenv'
-dotenv.config()
+dotenv.config({ path: './config/config.env' })
 
 const app = express()
 dataBaseConnect()
 
-app.get('/', (req, res) => {
-  res.send('HEYY THERE')
-})
+app.use('/api/user', userRoutes)
 
 app.listen(process.env.SERVER_PORT, () => {
   console.log('Server has started')
