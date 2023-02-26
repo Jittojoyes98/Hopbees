@@ -2,7 +2,7 @@
   "name": "hopbees",
   "version": "1.0.0",
   "description": "A web app to bring together the hobbies you love ",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "client": "npm run serve --prefix frontend",
