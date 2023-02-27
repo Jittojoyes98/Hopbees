@@ -1,79 +1,7 @@
-// Font family (change if required to , also note the file to be downloaded : https://font.gooova.com/fonts/14294/circular-std-font-family.html)
-
-@font-face {
-  font-family: 'Circular';
-  src: url('./fonts/CircularStd-Book.otf');
-  src: local('Circular Book'),
-    url('./fonts/CircularStd-Book.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Circular';
-  src: url('./fonts/CircularStd-BookItalic.otf');
-  src: local('Circular Book Italic'),
-    url('./fonts/CircularStd-BookItalic.otf') format('opentype');
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Circular';
-  src: url('./fonts/CircularStd-Medium.otf');
-  src: local('Circular Medium'),
-    url('./fonts/CircularStd-Medium.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Circular';
-  src: url('./fonts/CircularStd-MediumItalic.otf');
-  src: local('Circular Medium Italic'),
-    url('./fonts/CircularStd-MediumItalic.otf') format('opentype');
-  font-weight: 500;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Circular';
-  src: url('./fonts/CircularStd-Bold.otf');
-  src: local('Circular Bold'),
-    url('./fonts/CircularStd-Bold.otf') format('opentype');
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Circular';
-  src: url('./fonts/CircularStd-BoldItalic.otf');
-  src: local('Circular Bold Italic'),
-    url('./fonts/CircularStd-BoldItalic.otf') format('opentype');
-  font-weight: 600;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Circular';
-  src: url('./fonts/CircularStd-Black.otf');
-  src: local('Circular Black'),
-    url('./fonts/CircularStd-Black.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Circular';
-  src: url('./fonts/CircularStd-BlackItalic.otf');
-  src: local('Circular Black Italic'),
-    url('./fonts/CircularStd-BlackItalic.otf') format('opentype');
-  font-weight: 700;
-  font-style: italic;
-}
-
+@import './font.scss';
 @import './colors.scss';
 @import './variables.scss';
+@import './sidedrawer.scss';
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
 
 // @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;900&display=swap');
@@ -83,6 +11,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+:root {
+  --grey-1: #384853;
+  --grey-2: #6b7b8a;
+  --grey-3: #e3e6ea;
 }
 
 html {
@@ -147,6 +81,7 @@ img {
   padding-left: 2rem;
   padding-right: 2rem;
   height: 70px;
+  background-color: $body-background-color;
 }
 
 // transition is the same for all buttons
@@ -305,38 +240,26 @@ img {
   width: 100%;
   padding-left: 10px;
 }
+.menu {
+  display: flex;
+}
+.menu-dropdown {
+  display: none;
+}
 
 // screens
 
 @media screen and (max-width: 992px) {
-  .container {
-    margin-left: var(--mb-1-5);
-    margin-right: var(--mb-1-5);
+  .menu {
+    display: none;
   }
-
-  .button {
-    padding: 1rem 1.75rem;
-  }
-
-  .button__icon {
-    width: 22px;
-    height: 22px;
+  .menu-dropdown {
+    display: block;
   }
 }
 
 /* For medium devices */
 @media screen and (max-width: 768px) {
-  body {
-    margin: 0 0 var(--header-height) 0;
-  }
-
-  .section {
-    padding: 2rem 0 4rem;
-  }
-
-  .section__subtitle {
-    margin-bottom: var(--mb-3);
-  }
 }
 
 @media screen and (max-width: 576px) {

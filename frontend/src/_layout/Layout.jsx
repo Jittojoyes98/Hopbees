@@ -4,12 +4,11 @@ import { Footer } from './Footer'
 import { Header } from './Header'
 
 const Layout = ({ layout }) => {
-  console.log(layout)
   return (
     <>
-      <Header />
+      <Header layout={layout} />
       <Outlet />
-      <Footer />
+      <Footer layout={layout} />
     </>
   )
 }
