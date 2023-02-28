@@ -17,6 +17,7 @@
   --grey-1: #384853;
   --grey-2: #6b7b8a;
   --grey-3: #e3e6ea;
+  --grey-5: #f1f2f4;
 }
 
 html {
@@ -71,6 +72,15 @@ img {
 }
 
 // Main styles and reusable classes
+
+.home-wrapper {
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+}
+
+.common-wrapper {
+  margin-top: 10px;
+}
 
 .header {
   display: flex;
@@ -201,6 +211,11 @@ img {
   a {
     color: $button-text-color;
   }
+  .login-wrapper {
+    width: 25rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
 }
 
 .or-line {
@@ -247,6 +262,30 @@ img {
   display: none;
 }
 
+// for tabs
+
+.nav-tabs {
+  border: none;
+}
+.tabs {
+  #uncontrolled-tab-example-tab-Mentor {
+    margin-left: 20px;
+  }
+  .nav-item {
+    border-bottom: 1px var(--grey-5) solid;
+  }
+  .nav-link {
+    border: none;
+    color: var(--grey-1);
+    font-size: 16px;
+  }
+  .nav-link[aria-selected='true'] {
+    border-bottom: 3px $button-hover-color solid;
+    color: var(--grey-1);
+    font-size: 16px;
+  }
+}
+
 // screens
 
 @media screen and (max-width: 992px) {
@@ -260,6 +299,11 @@ img {
 
 /* For medium devices */
 @media screen and (max-width: 768px) {
+  .login-page {
+    .login-wrapper {
+      width: 100%;
+    }
+  }
 }
 
 @media screen and (max-width: 576px) {

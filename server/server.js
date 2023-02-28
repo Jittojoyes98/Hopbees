@@ -2,7 +2,7 @@ import express from 'express'
 import dataBaseConnect from './config/db.js'
 import dotenv from 'dotenv'
 import { mentorRouter, memberRouter } from './routes/index.js'
-dotenv.config({ path: './config/config.env' })
+const dot = dotenv.config({ path: 'server/config/config.env' })
 
 const app = express()
 dataBaseConnect()

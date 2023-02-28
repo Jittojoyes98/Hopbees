@@ -33,8 +33,14 @@ $spacers: (
   7: (
     $spacer * 3,
   ),
+  7_5: (
+    $spacer * 4,
+  ),
   8: (
     $spacer * 5,
+  ),
+  9: (
+    $spacer * 6,
   ),
 );
 $utilities: (

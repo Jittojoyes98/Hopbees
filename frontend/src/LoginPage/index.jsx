@@ -23,8 +23,8 @@ const LoginPage = () => {
 
   return (
     <div className="d-flex justify-content-center  align-items-center login-page">
-      <div className="w-30 pt-8">
-        <h1>Welcome to Hopbees !</h1>
+      <div className="login-wrapper pt-8">
+        <h1 className="text-center">Welcome to Hopbees!</h1>
         <p className="text-center">
           Connect with our community of mentors and students to increase your
           love for your hobbies.

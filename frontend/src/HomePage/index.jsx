@@ -1,106 +1,26 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Tab from 'react-bootstrap/Tab'
+import Tabs from 'react-bootstrap/Tabs'
+import SearchBar from '../_components/SearchBar/SearchBar/SearchBar'
 
 const index = () => {
   return (
-    <>
+    <div className="common-wrapper home-wrapper">
       <div>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque,
-          facere. Numquam, quos libero. Quia enim porro accusamus libero quos
-          totam voluptatem harum alias illo facere ipsum, numquam ut, adipisci
-          officiis.
-        </p>
+        <Tabs
+          defaultActiveKey="Mentee"
+          id="uncontrolled-tab-example"
+          className="mb-3 tabs"
+        >
+          <Tab eventKey="Mentee" title="Mentee">
+            <h1>Heyy</h1>
+          </Tab>
+          <Tab eventKey="Mentor" title="Mentor">
+            <h1>Heyyer</h1>
+          </Tab>
+        </Tabs>
       </div>
-      <div>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque,
-          facere. Numquam, quos libero. Quia enim porro accusamus libero quos
-          totam voluptatem harum alias illo facere ipsum, numquam ut, adipisci
-          officiis.
-        </p>
-      </div>
-      <div>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque,
-          facere. Numquam, quos libero. Quia enim porro accusamus libero quos
-          totam voluptatem harum alias illo facere ipsum, numquam ut, adipisci
-          officiis.
-        </p>
-      </div>
-      <div>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque,
-          facere. Numquam, quos libero. Quia enim porro accusamus libero quos
-          totam voluptatem harum alias illo facere ipsum, numquam ut, adipisci
-          officiis.
-        </p>
-      </div>
-      <div>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque,
-          facere. Numquam, quos libero. Quia enim porro accusamus libero quos
-          totam voluptatem harum alias illo facere ipsum, numquam ut, adipisci
-          officiis.
-        </p>
-      </div>
-      <div>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque,
-          facere. Numquam, quos libero. Quia enim porro accusamus libero quos
-          totam voluptatem harum alias illo facere ipsum, numquam ut, adipisci
-          officiis.
-        </p>
-      </div>
-      <div>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque,
-          facere. Numquam, quos libero. Quia enim porro accusamus libero quos
-          totam voluptatem harum alias illo facere ipsum, numquam ut, adipisci
-          officiis.
-        </p>
-      </div>
-      <div>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque,
-          facere. Numquam, quos libero. Quia enim porro accusamus libero quos
-          totam voluptatem harum alias illo facere ipsum, numquam ut, adipisci
-          officiis.
-        </p>
-      </div>
-      <div>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque,
-          facere. Numquam, quos libero. Quia enim porro accusamus libero quos
-          totam voluptatem harum alias illo facere ipsum, numquam ut, adipisci
-          officiis.
-        </p>
-      </div>
-      <div>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque,
-          facere. Numquam, quos libero. Quia enim porro accusamus libero quos
-          totam voluptatem harum alias illo facere ipsum, numquam ut, adipisci
-          officiis.
-        </p>
-      </div>
-      <div>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque,
-          facere. Numquam, quos libero. Quia enim porro accusamus libero quos
-          totam voluptatem harum alias illo facere ipsum, numquam ut, adipisci
-          officiis.
-        </p>
-      </div>
-      <div>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque,
-          facere. Numquam, quos libero. Quia enim porro accusamus libero quos
-          totam voluptatem harum alias illo facere ipsum, numquam ut, adipisci
-          officiis.
-        </p>
-      </div>
-    </>
+    </div>
   )
 }
 

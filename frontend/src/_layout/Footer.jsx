@@ -1,9 +1,7 @@
 import React from 'react'
 
-const Footer = () => {
-  return (
-    <div>Footer</div>
-  )
+const Footer = ({ layout }) => {
+  return <>{layout === 'login' ? <></> : <div>Footer</div>}</>
 }
 
-export {Footer};
+export { Footer }
