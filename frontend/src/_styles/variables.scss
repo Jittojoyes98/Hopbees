@@ -42,6 +42,9 @@ $spacers: (
   9: (
     $spacer * 6,
   ),
+  10: (
+    $spacer * 6.5,
+  ),
 );
 $utilities: (
   'width': (
@@ -53,6 +56,10 @@ $utilities: (
       50: 50%,
       75: 75%,
       100: 100%,
+      6_5: 6.56rem,
+      5_5: 5.75rem,
+      5_0: 5rem,
+      10_5: 10.56rem,
       auto: auto,
     ),
   ),

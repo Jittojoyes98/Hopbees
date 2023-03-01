@@ -74,12 +74,15 @@ img {
 // Main styles and reusable classes
 
 .home-wrapper {
-  padding-top: 9rem;
-  padding-bottom: 9rem;
+  max-width: 1180px;
+  padding: 9rem 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .common-wrapper {
   margin-top: 10px;
+  // flex: 1 1 0%;
 }
 
 .header {

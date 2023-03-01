@@ -1,25 +1,30 @@
 import React from 'react'
-import Tab from 'react-bootstrap/Tab'
-import Tabs from 'react-bootstrap/Tabs'
-import SearchBar from '../_components/SearchBar/SearchBar/SearchBar'
-
+import TabsReuse from '../_components/TabsReuse/TabsReuse'
+import TabsArray from './TabsArray'
 const index = () => {
   return (
-    <div className="common-wrapper home-wrapper">
-      <div>
-        <Tabs
-          defaultActiveKey="Mentee"
-          id="uncontrolled-tab-example"
-          className="mb-3 tabs"
-        >
-          <Tab eventKey="Mentee" title="Mentee">
-            <h1>Heyy</h1>
-          </Tab>
-          <Tab eventKey="Mentor" title="Mentor">
-            <h1>Heyyer</h1>
-          </Tab>
-        </Tabs>
+    <div className="common-wrapper position-relative">
+      <div className="home-wrapper">
+        <TabsReuse TabsArray={TabsArray} />
       </div>
+      <div
+        className="position-absolute h-6_5 w-6_5"
+        style={{ top: '72px', right: '195px' }}
+      >
+        <img
+          width="100%"
+          height="100%"
+          src="https://adplist.org/photos/mentors/1.webp"
+          alt=""
+          className="rounded-circle"
+        />
+      </div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
   )
 }
