@@ -6,11 +6,11 @@ const TabsReuse = ({ TabsArray }) => {
     <Tabs
       defaultActiveKey={TabsArray[0].name}
       id="uncontrolled-tab-example"
-      className="mb-3 tabs"
+      className="mb-4 tabs"
     >
-      {TabsArray.map((tab) => {
+      {TabsArray.map((tab, index) => {
         return (
-          <Tab eventKey={tab.name} title={tab.name}>
+          <Tab eventKey={tab.name} title={tab.name} key={index}>
             {tab.component}
           </Tab>
         )

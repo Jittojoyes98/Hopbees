@@ -1,6 +1,8 @@
 import React from 'react'
+import Mentee from '../_ui/Mentee/Mentee'
+import Mentor from '../_ui/Mentor/Mentor'
 const TabsArray = [
-  { name: 'Mentee', component: <h1>heyy</h1> },
-  { name: 'Mentor', component: <h1>Heyyer</h1> },
+  { name: 'Mentee', component: <Mentee /> },
+  { name: 'Mentor', component: <Mentor /> },
 ]
 export default TabsArray
