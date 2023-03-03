@@ -326,13 +326,28 @@ img {
   grid-template-columns: minmax(0px, 1fr) 170px 112px;
   align-items: center;
 }
-.search {
+.searchborder {
+  border: 1px $dark solid;
+  box-shadow: rgb(142 151 158 / 15%) 0px 4px 19px;
 }
 .hobby-search {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-right: 1rem;
+  cursor: pointer;
+  span[contenteditable]:empty::before {
+    content: 'Hobby';
+  }
+  // span[contenteditable]:empty::before {
+  //   border: none;
+  // }
+  span[contenteditable] {
+    outline: 0px solid transparent;
+  }
+}
+.hobby-input {
+  width: 100%;
 }
 .tertiary {
   background: var(--grad-2);
@@ -342,6 +357,17 @@ img {
   color: white;
   padding: 6px 32px;
 }
+.search-bar {
+  .tertiary:active {
+    background: var(--grad-2);
+    height: 60px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    padding: 6px 32px;
+  }
+}
+
 .tertiary:hover {
   background: var(--grad-2);
   height: 60px;

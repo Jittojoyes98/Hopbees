@@ -6,7 +6,7 @@ const dot = dotenv.config({ path: 'server/config/config.env' })
 
 const app = express()
 dataBaseConnect()
-
+app.use(express.json())
 app.use('/api/members', memberRouter)
 app.use('api/mentor', mentorRouter)
 

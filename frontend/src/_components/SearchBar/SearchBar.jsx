@@ -1,12 +1,31 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Button } from 'react-bootstrap'
+import classnames from 'classnames'
+import useClickAway from '../../_hooks/useClickAway'
 
 const SearchBar = () => {
+  const [edit, setEdit] = useState(false)
+
+  const svgRef = useRef(null)
+
+  const { ref: wrapperRef } = useClickAway(setEdit)
+
+  const onClickSpan = () => {
+    setEdit(true)
+  }
+  const handleSearchClick = () => {
+    svgRef.current.focus()
+    onClickSpan()
+  }
+  // const onClickAway = () => {}
   return (
-    <div className="search-wrapper">
+    <div
+      ref={wrapperRef}
+      className={classnames('search-wrapper', { searchborder: edit })}
+    >
       <div className="search-bar">
         <div className="search">
-          <span>
+          <span style={{ cursor: 'pointer' }}>
             <svg
               fill="none"
               width="24"
@@ -35,11 +54,19 @@ const SearchBar = () => {
             className="search-input"
             type="text"
             placeholder="Search by name, hobby or role"
+            onClick={() => setEdit(true)}
           />
         </div>
         <div className="hobby-search">
-          <span>Hobby</span>
-          <span>
+          <span
+            ref={svgRef}
+            contenteditable="true"
+            className="hobby-input"
+            onClick={onClickSpan}
+          >
+            {edit ? '' : 'Hobby'}
+          </span>
+          <span onClick={handleSearchClick}>
             <svg
               fill="none"
               width="16"

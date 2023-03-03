@@ -57,7 +57,7 @@ const index = () => {
       </div>
       <div
         className="position-absolute h-6_5 w-6_5"
-        style={{ top: '558px', right: '374px' }}
+        style={{ top: '578px', right: '374px' }}
       >
         <img
           width="100%"
