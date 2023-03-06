@@ -13,6 +13,14 @@ const menteeSchema = new mongoose.Schema({
     required: [true, 'Please add description'],
     maxlength: [500, 'Description cannot be more than 500'],
   },
+  email: {
+    type: String,
+    required: [true, 'Please add email addresss'],
+    match: [
+      /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/,
+      "Please add a valid email"
+    ]
+  },
   mentors: [
     {
       type: mongoose.Schema.Types.ObjectId,
