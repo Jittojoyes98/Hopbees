@@ -13,6 +13,9 @@ const menteeSchema = new mongoose.Schema({
     required: [true, 'Please add description'],
     maxlength: [500, 'Description cannot be more than 500'],
   },
+  slug:{
+    type:String
+  },
   email: {
     type: String,
     required: [true, 'Please add email addresss'],
@@ -42,6 +45,10 @@ const menteeSchema = new mongoose.Schema({
     type: String,
     maxlength: [20, 'Organisation cannot be more than 20'],
   },
+})
+menteeSchema.pre("save", function (next) {
+  this.slug = slugify(this.name, { lower: true })
+  next()
 })
 
 const Mentee = mongoose.model('Mentee', menteeSchema)

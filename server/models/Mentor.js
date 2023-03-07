@@ -1,4 +1,5 @@
 import mongoose from 'mongoose'
+import slugify from 'slugify'
 
 const mentorSchema = new mongoose.Schema({
   name: {
@@ -12,6 +13,9 @@ const mentorSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Please add description'],
     maxlength: [500, 'Description cannot be more than 500'],
+  },
+  slug: {
+    type: String
   },
   email:{
     type:String,
@@ -42,6 +46,11 @@ const mentorSchema = new mongoose.Schema({
     required: true,
     maxlength: [20, 'Expertise cannot be more than 20'],
   },
+})
+
+mentorSchema.pre("save",function(next){
+  this.slug=slugify(this.name,{lower:true})
+  next()
 })
 
 const Mentor = mongoose.model('Mentor', mentorSchema)
